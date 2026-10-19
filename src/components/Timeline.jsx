@@ -26,7 +26,7 @@ export default function Timeline({ memories }) {
             >
               <TiltCard>
                 <figure className={`rounded bg-white p-3 pb-5 shadow-[0_24px_50px_-24px_rgba(61,42,46,.45)] ${left ? "-rotate-[1.5deg]" : "rotate-[1.5deg]"}`}>
-                  <img src={m.photo} alt={m.title} loading="lazy" className="block aspect-[4/3] w-full rounded-sm bg-blush object-cover" />
+                  <img src={m.photo} alt={m.title} loading="lazy" className="block aspect-[3/4] w-full rounded-sm bg-blush object-cover" />
                 </figure>
               </TiltCard>
               <span className="mt-3.5 inline-block text-[13px] font-medium tracking-[.15em] text-rose-deep">{m.date}</span>

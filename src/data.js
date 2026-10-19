@@ -20,37 +20,37 @@ const data = {
       date: "28/02/2026",
       title: "Ngày mình bắt đầu",
       text: "Viết vài dòng về ngày hai đứa chính thức thành một đôi.",
-      photo: "photos/anh-1.svg"
+      photo: "photos/anh-1.jpg"
     },
     {
       date: "xx/03/2026",
       title: "Lần hẹn hò đầu tiên",
       text: "Mình đã đi đâu, ăn gì, em mặc gì, điều gì làm anh nhớ mãi?",
-      photo: "photos/anh-2.svg"
+      photo: "photos/anh-2.jpg"
     },
     {
       date: "xx/04/2026",
       title: "Chuyến đi chơi đầu tiên",
       text: "Một kỷ niệm vui, hoặc một lần hai đứa cười đau cả bụng.",
-      photo: "photos/anh-3.svg"
+      photo: "photos/anh-3.jpg"
     },
     {
       date: "xx/06/2026",
       title: "Khoảnh khắc đáng nhớ",
       text: "Một bức ảnh mà mỗi lần xem lại anh đều mỉm cười.",
-      photo: "photos/anh-4.svg"
+      photo: "photos/anh-4.jpg"
     },
     {
       date: "xx/08/2026",
       title: "Một ngày bình thường mà đặc biệt",
       text: "Những điều nhỏ xíu em làm khiến anh thấy may mắn.",
-      photo: "photos/anh-5.svg"
+      photo: "photos/anh-5.jpg"
     },
     {
       date: "20/10/2026",
       title: "Hôm nay",
       text: "20/10 đầu tiên mình bên nhau, và còn nhiều lần nữa.",
-      photo: "photos/anh-6.svg"
+      photo: "photos/anh-6.jpg"
     }
   ],
 
