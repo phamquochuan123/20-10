@@ -14,42 +14,36 @@ const data = {
   // Nếu chưa có file, trang sẽ tự chơi một giai điệu hộp nhạc nhẹ nhàng.
   music: "music.mp3",
 
-  // Dòng thời gian kỷ niệm: ảnh để trong public/photos/, thêm/bớt tuỳ ý, theo thứ tự thời gian
+  // Kỷ niệm: ảnh để trong public/photos/, thêm/bớt tuỳ ý (có thể thêm date: "dd/mm/yyyy" nếu muốn hiện ngày)
   memories: [
     {
-      date: "28/02/2026",
-      title: "Ngày mình bắt đầu",
-      text: "Viết vài dòng về ngày hai đứa chính thức thành một đôi.",
+      title: "Nàng thơ của anh",
+      text: "Em đứng giữa nắng chiều, váy trắng nhẹ tênh, cười một cái là cả khu vườn như dịu lại. Anh nhìn mãi vẫn chưa quen được: người xinh thế này lại là người thương anh.",
       photo: "photos/anh-1.jpg"
     },
     {
-      date: "xx/03/2026",
-      title: "Lần hẹn hò đầu tiên",
-      text: "Mình đã đi đâu, ăn gì, em mặc gì, điều gì làm anh nhớ mãi?",
+      title: "Những buổi trò chuyện không hồi kết",
+      text: "Em vừa kể vừa chỉ tay, anh ngồi nghe mà quên luôn mình định nói gì. Chỉ cần được ngồi cạnh em thế này, quán nào cũng thành quán quen.",
       photo: "photos/anh-2.jpg"
     },
     {
-      date: "xx/04/2026",
-      title: "Chuyến đi chơi đầu tiên",
-      text: "Một kỷ niệm vui, hoặc một lần hai đứa cười đau cả bụng.",
+      title: "Em những lúc chẳng làm dáng",
+      text: "Đeo kính, ngả lưng, mặt hơi mệt một chút. Người ta thích em lúc lung linh, còn anh thương cả những lúc em bình thường và thật nhất như thế này.",
       photo: "photos/anh-3.jpg"
     },
     {
-      date: "xx/06/2026",
-      title: "Khoảnh khắc đáng nhớ",
-      text: "Một bức ảnh mà mỗi lần xem lại anh đều mỉm cười.",
+      title: "Hai đứa trong gương",
+      text: "Gương thì nhỏ mà hai đứa cứ đứng sát vào nhau. Anh mong sau này mọi khung hình của anh đều có em ở bên cạnh như vậy.",
       photo: "photos/anh-4.jpg"
     },
     {
-      date: "xx/08/2026",
-      title: "Một ngày bình thường mà đặc biệt",
-      text: "Những điều nhỏ xíu em làm khiến anh thấy may mắn.",
+      title: "Hai đứa trẻ con",
+      text: "Bờm ếch xanh, bờm tai thỏ, môi chu, tay chữ V. Ở cạnh em anh được làm trẻ con, và anh nguyện làm đứa trẻ con của riêng em mãi.",
       photo: "photos/anh-5.jpg"
     },
     {
-      date: "20/10/2026",
-      title: "Hôm nay",
-      text: "20/10 đầu tiên mình bên nhau, và còn nhiều lần nữa.",
+      title: "Đôi mình áo trắng",
+      text: "Em cầm máy, anh đứng sau lưng em. Chắc đây là tấm anh thích nhất, vì nhìn vào là thấy hai đứa mình thật sự là một đôi.",
       photo: "photos/anh-6.jpg"
     }
   ],

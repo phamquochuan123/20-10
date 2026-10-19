@@ -29,8 +29,8 @@ export default function Timeline({ memories }) {
                   <img src={m.photo} alt={m.title} loading="lazy" className="block aspect-[3/4] w-full rounded-sm bg-blush object-cover" />
                 </figure>
               </TiltCard>
-              <span className="mt-3.5 inline-block text-[13px] font-medium tracking-[.15em] text-rose-deep">{m.date}</span>
-              <h3 className="my-0.5 font-script text-3xl leading-tight text-wine">{m.title}</h3>
+              {m.date && <span className="mt-3.5 inline-block text-[13px] font-medium tracking-[.15em] text-rose-deep">{m.date}</span>}
+              <h3 className="mb-0.5 mt-3.5 font-script text-3xl leading-tight text-wine">{m.title}</h3>
               <p className="text-[15px] text-muted">{m.text}</p>
             </motion.div>
           </li>
