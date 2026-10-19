@@ -67,12 +67,10 @@ const data = {
 
   // Lá thư cuối trang: mỗi phần tử là một đoạn văn
   letter: [
-    "Gửi Bún Iu,",
-    "Hôm nay là 20/10 đầu tiên anh được ở bên em. Từ ngày 28/2 đến giờ mới gần tám tháng thôi, mà anh cứ có cảm giác như đã quen em lâu lắm rồi. Chắc vì ở cạnh em, mọi thứ đều tự nhiên đến lạ.",
-    "Anh nhớ những buổi ngồi quán nghe em kể chuyện không ngừng, nhớ lần hai đứa đội bờm ếch với bờm tai thỏ chụp photobooth, nhớ cả những lúc em đeo kính ngả lưng than mệt. Lúc em lung linh anh thương, mà lúc em bình thường nhất anh lại càng thương hơn.",
-    "Anh không giỏi nói mấy lời sến, nên anh tự làm trang web này cho em. Mỗi dòng ở đây đều là thật lòng anh.",
-    "Cảm ơn em vì đã chọn anh, đã kiên nhẫn với những lúc anh vụng về. Anh hứa sẽ cố gắng nhiều hơn để em lúc nào cũng thấy mình được yêu, không chỉ hôm nay mà cả những ngày bình thường nữa.",
-    "Chúc Bún Iu 20/10 thật vui, luôn xinh đẹp, và mãi là cô gái của anh."
+    "Gửi Bún Iu,"
+    // Viết tiếp lá thư ở đây, mỗi đoạn là một dòng trong ngoặc kép, cách nhau bằng dấu phẩy. Ví dụ:
+    // "Đoạn thứ nhất...",
+    // "Đoạn thứ hai..."
   ]
 };
 
