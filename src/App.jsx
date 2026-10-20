@@ -45,6 +45,16 @@ export default function App() {
     document.body.style.overflow = stage === "main" ? "" : "hidden";
   }, [stage]);
 
+  useEffect(() => {
+    if (stage !== "main") return;
+    const tap = (e) => {
+      if (e.target.closest("button, a, img, [role=dialog]")) return;
+      petals.hearts(e.clientX, e.clientY, 7);
+    };
+    addEventListener("pointerdown", tap);
+    return () => removeEventListener("pointerdown", tap);
+  }, [stage]);
+
   const open = () => {
     setStage("opening");
     startMusic(data.music);

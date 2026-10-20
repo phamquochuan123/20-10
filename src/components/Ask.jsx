@@ -20,6 +20,7 @@ export default function Ask({ question, answer }) {
 
   const yes = (e) => {
     setDone(true);
+    navigator.vibrate?.([60, 40, 120]);
     const r = e.currentTarget.getBoundingClientRect();
     petals.hearts(r.left + r.width / 2, r.top, 90);
     setTimeout(() => petals.hearts(innerWidth * 0.2, innerHeight * 0.5, 50), 400);
@@ -54,6 +55,12 @@ export default function Ask({ question, answer }) {
         className="mt-7 min-h-[1.4em] font-script text-[clamp(26px,6vw,36px)] text-wine" aria-live="polite">
         {done ? answer : ""}
       </motion.p>
+      {done && (
+        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.6, duration: 1 }}
+          className="mt-3 font-serif italic text-muted">
+          Hẹn em ở 20/10 năm sau, và cả những năm sau nữa.
+        </motion.p>
+      )}
     </div>
   );
 }

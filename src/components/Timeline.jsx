@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import TiltCard from "./TiltCard.jsx";
 
 // Dòng thời gian: ảnh polaroid bay vào theo kiểu lật 3D, nghiêng theo ngón tay
@@ -7,6 +7,15 @@ export default function Timeline({ memories }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 60%", "end 60%"] });
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 20 });
+  const [zoom, setZoom] = useState(null);
+
+  useEffect(() => {
+    if (!zoom) return;
+    const esc = (e) => e.key === "Escape" && setZoom(null);
+    addEventListener("keydown", esc);
+    document.body.style.overflow = "hidden";
+    return () => { removeEventListener("keydown", esc); document.body.style.overflow = ""; };
+  }, [zoom]);
 
   return (
     <ol ref={ref} className="relative mx-auto max-w-5xl list-none">
@@ -26,7 +35,7 @@ export default function Timeline({ memories }) {
             >
               <TiltCard>
                 <figure className={`rounded bg-white p-3 pb-5 shadow-[0_24px_50px_-24px_rgba(61,42,46,.45)] ${left ? "-rotate-[1.5deg]" : "rotate-[1.5deg]"}`}>
-                  <img src={m.photo} alt={m.title} loading="lazy" className="block aspect-[3/4] w-full rounded-sm bg-blush object-cover" />
+                  <img src={m.photo} alt={m.title} loading="lazy" onClick={() => setZoom(m)} className="block aspect-[3/4] w-full cursor-zoom-in rounded-sm bg-blush object-cover" />
                 </figure>
               </TiltCard>
               {m.date && <span className="mt-3.5 inline-block text-[13px] font-medium tracking-[.15em] text-rose-deep">{m.date}</span>}
@@ -36,6 +45,20 @@ export default function Timeline({ memories }) {
           </li>
         );
       })}
+      {/* xem ảnh to */}
+      <AnimatePresence>
+        {zoom && (
+          <motion.div key="zoom" onClick={() => setZoom(null)} role="dialog" aria-label={zoom.title}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[80] flex cursor-zoom-out flex-col items-center justify-center gap-4 bg-[#1c0a13]/85 p-4 backdrop-blur-sm">
+            <motion.img src={zoom.photo} alt={zoom.title}
+              initial={{ scale: 0.8, rotate: -4, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} exit={{ scale: 0.85, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="max-h-[78svh] max-w-full rounded-md border-[10px] border-white object-contain shadow-2xl" />
+            <p className="max-w-md text-center font-script text-2xl text-[#fde4e8]">{zoom.title}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </ol>
   );
 }
